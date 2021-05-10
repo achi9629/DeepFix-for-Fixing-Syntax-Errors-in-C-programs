@@ -173,7 +173,7 @@ def decode_sequence(input_seq):
         if(sampled_token_index==OOV_Token):
             sampled_char = 'OOV_Token'
         sampled_char = rev_dictionary_of_tokens1[sampled_token_index]
-        if (sampled_char == 'EOS' len(decoded_sentence) > maxSentenceLen):
+        if (sampled_char == 'EOS' or len(decoded_sentence) > maxSentenceLen): 
                 stop_condition = True
                 break
         decoded_sentence.append(sampled_char)
